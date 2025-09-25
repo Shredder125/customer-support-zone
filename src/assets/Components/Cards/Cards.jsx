@@ -1,5 +1,4 @@
 import React from "react";
-import Green from "../../../assets/green.jpg";
 import CalendarIcon from "../../../assets/Vector.png";
 
 const Cards = ({ ticket, onClick }) => {
@@ -11,15 +10,26 @@ const Cards = ({ ticket, onClick }) => {
   };
   const priorityColour = priorityColourMap[ticket.priority] || "text-gray-500";
 
+  const ConditionMap = {
+    Open: "bg-green-300",
+    "In Progress": "bg-yellow-300",
+    Resolved: "bg-gray-300",
+  };
+  const conditionBg = ConditionMap[ticket.status] || "bg-gray-200";
+
   return (
-    <div
-      onClick={onClick}
-      className="w-full rounded-lg p-3 shadow-lg bg-white cursor-pointer hover:bg-gray-100"
-    >
+    <div onClick={(e) => {
+        e.stopPropagation();
+        onClick();
+      }} className="w-full rounded-lg p-3 shadow-lg bg-white cursor-pointer hover:bg-gray-100" >
       <div className="flex justify-between items-center">
         <h1 className="font-bold text-base">{ticket.title}</h1>
-        <button className="px-2 py-1 bg-green-300 rounded-md flex items-center gap-1 text-sm">
-          <img className="w-3 h-3" src={Green} alt="" />
+        <button
+          className={`px-2 py-1 rounded-md flex items-center gap-1 text-sm ${conditionBg}`}
+        >
+          <span className="w-4 h-4 bg-white flex justify-center items-center rounded-sm">
+            <span className={`w-2 h-2 rounded-full ${conditionBg}`}></span>
+          </span>
           {ticket.status}
         </button>
       </div>

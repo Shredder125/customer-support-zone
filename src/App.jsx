@@ -3,6 +3,9 @@ import "./App.css";
 import Banner from "./assets/Components/Banner/Banner";
 import MainSect from "./assets/Components/MainSect/MainSect";
 import ticketData from "../../customer-support-zone/public/CsProblems.json";
+import Footer from "./assets/Components/Footer/Footer";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 function App() {
   const [tickets, setTickets] = useState(ticketData);
@@ -13,7 +16,7 @@ function App() {
   const handleAddTask = (ticket) => {
     if (!taskStatus.find((tick) => tick.id === ticket.id)) {
       setTaskStatus([...taskStatus, ticket]);
-      alert("Ticket added to Task Status");
+      toast.success("Ticket added to Task Status"); // replaced alert
       setInProgressCount(inProgressCount + 1);
       setTickets(tickets.filter((tick) => tick.id !== ticket.id));
     }
@@ -22,7 +25,7 @@ function App() {
   const handleCompleteTask = (ticketId) => {
     const completedTicket = taskStatus.find((tick) => tick.id === ticketId);
     if (completedTicket) {
-      alert("Ticket marked as completed");
+      toast.success("Ticket marked as completed"); // replaced alert
       setTaskStatus(taskStatus.filter((tick) => tick.id !== ticketId));
       setResolvedTasks([...resolvedTasks, completedTicket]);
       setInProgressCount(inProgressCount - 1);
@@ -32,7 +35,6 @@ function App() {
   return (
     <>
       {/* NAAVBAR */}
-
       <div>
         <div className="navbar bg-base-100 shadow-sm max-w-[1600px] mx-auto flex flex-col md:flex-row gap-3">
           <div className="flex-1">
@@ -55,14 +57,17 @@ function App() {
       <Banner
         inProgressCount={inProgressCount}
         resolvedCount={resolvedTasks.length}
-      />
+      ></Banner>
       <MainSect
         tickets={tickets}
         onCardClick={handleAddTask}
         taskStatus={taskStatus}
         onCompleteClick={handleCompleteTask}
         resolvedTasks={resolvedTasks}
-      />
+      ></MainSect>
+      <Footer></Footer>
+
+      <ToastContainer position="top-right" autoClose={2000} />
     </>
   );
 }

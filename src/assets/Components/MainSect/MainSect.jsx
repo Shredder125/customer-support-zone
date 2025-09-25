@@ -27,7 +27,7 @@ const MainSect = ({
         <div className="col-span-2">
           <div className="col-span-2">
             <h1 className="text-2xl font-bold mb-5">Task Status</h1>
-            <div className="flex flex-col gap-4">
+            <div className="flex flex-col gap-4 justify-center">
               {taskStatus.map((ticket) => (
                 <div
                   key={ticket.id}
@@ -36,7 +36,10 @@ const MainSect = ({
                   <h2 className="font-semibold text-lg">{ticket.title}</h2>
                   <button
                     className="btn btn-sm w-full btn-success mt-2"
-                    onClick={() => onCompleteClick(ticket.id)}
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      onCompleteClick(ticket.id);
+                    }}
                   >
                     Complete
                   </button>
