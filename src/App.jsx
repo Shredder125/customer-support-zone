@@ -1,12 +1,38 @@
+import React, { useState } from "react";
 import "./App.css";
 import Banner from "./assets/Components/Banner/Banner";
-import Cards from "./assets/Components/Cards/Cards";
 import MainSect from "./assets/Components/MainSect/MainSect";
-
+import ticketData from "../../customer-support-zone/public/CsProblems.json";
 
 function App() {
+  const [tickets, setTickets] = useState(ticketData);
+  const [taskStatus, setTaskStatus] = useState([]);
+  const [resolvedTasks, setResolvedTasks] = useState([]);
+  const [inProgressCount, setInProgressCount] = useState(0);
+
+  const handleAddTask = (ticket) => {
+    if (!taskStatus.find((tick) => tick.id === ticket.id)) {
+      setTaskStatus([...taskStatus, ticket]);
+      alert("Ticket added to Task Status");
+      setInProgressCount(inProgressCount + 1);
+      setTickets(tickets.filter((tick) => tick.id !== ticket.id));
+    }
+  };
+
+  const handleCompleteTask = (ticketId) => {
+    const completedTicket = taskStatus.find((tick) => tick.id === ticketId);
+    if (completedTicket) {
+      alert("Ticket marked as completed");
+      setTaskStatus(taskStatus.filter((tick) => tick.id !== ticketId));
+      setResolvedTasks([...resolvedTasks, completedTicket]);
+      setInProgressCount(inProgressCount - 1);
+    }
+  };
+
   return (
     <>
+      {/* NAAVBAR */}
+
       <div>
         <div className="navbar bg-base-100 shadow-sm max-w-[1600px] mx-auto flex flex-col md:flex-row gap-3">
           <div className="flex-1">
@@ -25,8 +51,18 @@ function App() {
           </div>
         </div>
       </div>
-      <Banner></Banner>
-      <MainSect></MainSect>
+
+      <Banner
+        inProgressCount={inProgressCount}
+        resolvedCount={resolvedTasks.length}
+      />
+      <MainSect
+        tickets={tickets}
+        onCardClick={handleAddTask}
+        taskStatus={taskStatus}
+        onCompleteClick={handleCompleteTask}
+        resolvedTasks={resolvedTasks}
+      />
     </>
   );
 }
