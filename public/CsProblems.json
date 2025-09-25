@@ -1,0 +1,110 @@
+[
+  {
+    "id": 1,
+    "title": "Login Issue",
+    "description": "Customer unable to login with correct credentials.",
+    "customer": "John Doe",
+    "priority": "High",
+    "status": "Open",
+    "createdAt": "2025-09-20T10:15:00Z"
+  },
+  {
+    "id": 2,
+    "title": "Payment Failure",
+    "description": "Transaction failed during checkout process.",
+    "customer": "Jane Smith",
+    "priority": "Critical",
+    "status": "Open",
+    "createdAt": "2025-09-21T09:30:00Z"
+  },
+  {
+    "id": 3,
+    "title": "App Crash on Startup",
+    "description": "Mobile app crashes immediately after launch.",
+    "customer": "Alice Johnson",
+    "priority": "High",
+    "status": "In Progress",
+    "createdAt": "2025-09-21T14:45:00Z"
+  },
+  {
+    "id": 4,
+    "title": "Feature Request: Dark Mode",
+    "description": "Customer requests dark mode for better usability at night.",
+    "customer": "Bob Brown",
+    "priority": "Medium",
+    "status": "Open",
+    "createdAt": "2025-09-22T08:00:00Z"
+  },
+  {
+    "id": 5,
+    "title": "Incorrect Billing",
+    "description": "Invoice shows incorrect amount for last month.",
+    "customer": "Cathy Green",
+    "priority": "High",
+    "status": "Open",
+    "createdAt": "2025-09-22T11:20:00Z"
+  },
+  {
+    "id": 6,
+    "title": "Password Reset Not Working",
+    "description": "Customer cannot reset password via email link.",
+    "customer": "David Lee",
+    "priority": "Medium",
+    "status": "In Progress",
+    "createdAt": "2025-09-23T07:50:00Z"
+  },
+  {
+    "id": 7,
+    "title": "Shipping Delay",
+    "description": "Order shipment delayed beyond expected delivery date.",
+    "customer": "Emily White",
+    "priority": "Low",
+    "status": "Open",
+    "createdAt": "2025-09-23T12:10:00Z"
+  },
+  {
+    "id": 8,
+    "title": "Error 404 on Help Page",
+    "description": "Customer encounters 404 error when accessing support page.",
+    "customer": "Frank Moore",
+    "priority": "Medium",
+    "status": "Resolved",
+    "createdAt": "2025-09-24T09:00:00Z"
+  },
+  {
+    "id": 9,
+    "title": "Refund Not Received",
+    "description": "Customer did not receive refund for canceled order.",
+    "customer": "Grace Hall",
+    "priority": "High",
+    "status": "Open",
+    "createdAt": "2025-09-24T10:25:00Z"
+  },
+  {
+    "id": 10,
+    "title": "App Update Issue",
+    "description": "Latest app update causing login problems.",
+    "customer": "Henry King",
+    "priority": "Critical",
+    "status": "In Progress",
+    "createdAt": "2025-09-24T14:15:00Z"
+  },
+  {
+    "id": 11,
+    "title": "Notification Not Working",
+    "description": "Customer not receiving push notifications for new messages.",
+    "customer": "Isla Scott",
+    "priority": "Medium",
+    "status": "Open",
+    "createdAt": "2025-09-25T08:30:00Z"
+  },
+  {
+    "id": 12,
+    "title": "Slow Website Loading",
+    "description": "Pages take too long to load on desktop browser.",
+    "customer": "Jackie Turner",
+    "priority": "Low",
+    "status": "In Progress",
+    "createdAt": "2025-09-25T09:45:00Z"
+  }
+]
