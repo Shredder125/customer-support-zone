@@ -16,7 +16,7 @@ function App() {
   const handleAddTask = (ticket) => {
     if (!taskStatus.find((tick) => tick.id === ticket.id)) {
       setTaskStatus([...taskStatus, ticket]);
-      toast.success("Ticket added to Task Status"); // replaced alert
+      toast.success("Ticket added to Task Status"); 
       setInProgressCount(inProgressCount + 1);
       setTickets(tickets.filter((tick) => tick.id !== ticket.id));
     }
@@ -25,7 +25,7 @@ function App() {
   const handleCompleteTask = (ticketId) => {
     const completedTicket = taskStatus.find((tick) => tick.id === ticketId);
     if (completedTicket) {
-      toast.success("Ticket marked as completed"); // replaced alert
+      toast.success("Ticket marked as completed"); 
       setTaskStatus(taskStatus.filter((tick) => tick.id !== ticketId));
       setResolvedTasks([...resolvedTasks, completedTicket]);
       setInProgressCount(inProgressCount - 1);
