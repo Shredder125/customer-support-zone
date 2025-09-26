@@ -1,3 +1,6 @@
+// README QUESTION ANSWERS ARE IN README2 FILE>>>>>>>>>
+// PLEASE DO NOT FORGET TO CHECK README2 FILE..************************
+
 import React, { useState } from "react";
 import "./App.css";
 import Banner from "./assets/Components/Banner/Banner";

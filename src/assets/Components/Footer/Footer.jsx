@@ -1,3 +1,6 @@
+// README QUESTION ANSWERS ARE IN README2 FILE>>>>>>>>>
+// PLEASE DO NOT FORGET TO CHECK README2 FILE..************************
+
 import React from "react";
 
 const Footer = () => {
