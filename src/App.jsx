@@ -5,7 +5,7 @@ import React, { useState } from "react";
 import "./App.css";
 import Banner from "./assets/Components/Banner/Banner";
 import MainSect from "./assets/Components/MainSect/MainSect";
-import ticketData from "../../customer-support-zone/public/CsProblems.json";
+import ticketData from "./CsProblems.json";
 import Footer from "./assets/Components/Footer/Footer";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
