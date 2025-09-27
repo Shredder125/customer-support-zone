@@ -19,7 +19,7 @@ function App() {
   const handleAddTask = (ticket) => {
     if (!taskStatus.find((tick) => tick.id === ticket.id)) {
       setTaskStatus([...taskStatus, ticket]);
-      toast.success("Ticket added to Task Status"); 
+      toast.success("Ticket added to Task Status");
       setInProgressCount(inProgressCount + 1);
       setTickets(tickets.filter((tick) => tick.id !== ticket.id));
     }
@@ -28,7 +28,7 @@ function App() {
   const handleCompleteTask = (ticketId) => {
     const completedTicket = taskStatus.find((tick) => tick.id === ticketId);
     if (completedTicket) {
-      toast.success("Ticket marked as completed"); 
+      toast.success("Ticket marked as completed");
       setTaskStatus(taskStatus.filter((tick) => tick.id !== ticketId));
       setResolvedTasks([...resolvedTasks, completedTicket]);
       setInProgressCount(inProgressCount - 1);
@@ -37,7 +37,6 @@ function App() {
 
   return (
     <>
-      {/* NAAVBAR */}
       <div>
         <div className="navbar bg-base-100 shadow-sm max-w-[1600px] mx-auto flex flex-col md:flex-row gap-3">
           <div className="flex-1">

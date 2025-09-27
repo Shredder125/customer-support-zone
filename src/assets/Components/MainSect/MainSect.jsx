@@ -1,7 +1,3 @@
-// README QUESTION ANSWERS ARE IN README2 FILE>>>>>>>>>
-// PLEASE DO NOT FORGET TO CHECK README2 FILE..************************
-
-
 import React from "react";
 import Cards from "../Cards/Cards";
 
@@ -19,7 +15,7 @@ const MainSect = ({
       </div>
 
       <div className="max-w-[1440px] mx-auto grid grid-cols-1 md:grid-cols-8 gap-4">
-        <div className="col-span-6 grid grid-cols-1 md:grid-cols-2 gap-4 items-start">
+        <div className="col-span-6 grid grid-cols-1 md:grid-cols-2 gap-4 auto-rows-min">
           {tickets.map((ticket) => (
             <Cards
               key={ticket.id}
@@ -40,10 +36,7 @@ const MainSect = ({
                   <h2 className="font-semibold text-lg">{ticket.title}</h2>
                   <button
                     className="btn btn-sm w-full btn-success mt-2"
-                    onClick={(e) => {
-                      e.stopPropagation();
-                      onCompleteClick(ticket.id);
-                    }}
+                    onClick={() => onCompleteClick(ticket.id)}
                   >
                     Complete
                   </button>
