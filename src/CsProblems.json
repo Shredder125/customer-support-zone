@@ -6,7 +6,7 @@
     "customer": "John Doe",
     "priority": "High",
     "status": "Open",
-    "createdAt": "2025-09-20 at 10:15:00"
+    "createdAt": "2025-09-20"
   },
   {
     "id": 2,
@@ -15,7 +15,7 @@
     "customer": "Jane Smith",
     "priority": "Critical",
     "status": "Open",
-    "createdAt": "2025-09-21 at 09:30:00"
+    "createdAt": "2025-09-21"
   },
   {
     "id": 3,
@@ -24,7 +24,7 @@
     "customer": "Alice Johnson",
     "priority": "High",
     "status": "In Progress",
-    "createdAt": "2025-09-21 at 14:45:00"
+    "createdAt": "2025-09-21"
   },
   {
     "id": 4,
@@ -33,7 +33,7 @@
     "customer": "Bob Brown",
     "priority": "Medium",
     "status": "Open",
-    "createdAt": "2025-09-22 at 08:00:00"
+    "createdAt": "2025-09-22"
   },
   {
     "id": 5,
@@ -42,7 +42,7 @@
     "customer": "Cathy Green",
     "priority": "High",
     "status": "Open",
-    "createdAt": "2025-09-22 at 11:20:00"
+    "createdAt": "2025-09-22"
   },
   {
     "id": 6,
@@ -51,7 +51,7 @@
     "customer": "David Lee",
     "priority": "Medium",
     "status": "In Progress",
-    "createdAt": "2025-09-23 at 07:50:00"
+    "createdAt": "2025-09-23"
   },
   {
     "id": 7,
@@ -60,7 +60,7 @@
     "customer": "Emily White",
     "priority": "Low",
     "status": "Open",
-    "createdAt": "2025-09-23 at 12:10:00"
+    "createdAt": "2025-09-23"
   },
   {
     "id": 8,
@@ -69,7 +69,7 @@
     "customer": "Frank Moore",
     "priority": "Medium",
     "status": "Resolved",
-    "createdAt": "2025-09-24 at 09:00:00"
+    "createdAt": "2025-09-24"
   },
   {
     "id": 9,
@@ -78,7 +78,7 @@
     "customer": "Grace Hall",
     "priority": "High",
     "status": "Open",
-    "createdAt": "2025-09-24 at 10:25:00"
+    "createdAt": "2025-09-24"
   },
   {
     "id": 10,
@@ -87,7 +87,7 @@
     "customer": "Henry King",
     "priority": "Critical",
     "status": "In Progress",
-    "createdAt": "2025-09-24 at 14:15:00"
+    "createdAt": "2025-09-24"
   },
   {
     "id": 11,
@@ -96,7 +96,7 @@
     "customer": "Isla Scott",
     "priority": "Medium",
     "status": "Open",
-    "createdAt": "2025-09-25 at 08:30:00"
+    "createdAt": "2025-09-25"
   },
   {
     "id": 12,
@@ -105,6 +105,6 @@
     "customer": "Jackie Turner",
     "priority": "Low",
     "status": "In Progress",
-    "createdAt": "2025-09-25 at 09:45:00"
+    "createdAt": "2025-09-25"
   }
 ]
